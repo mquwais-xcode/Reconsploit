@@ -25,3 +25,4 @@ def showbanners():
 //    | |        //   ) ) //       // ((___/ / / /   / /      
 		"""
 	]
+	print(random.choice(logos))

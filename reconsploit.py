@@ -7,11 +7,7 @@ import threading
 import time
 
 # --- Banner & Colors ---
-try:
-    from ui.banner import showbanner
-except ImportError:
-    def showbanner():
-        print("\033[1;31m[!] Banner module not found.\033[0m")
+from ui.banner import *
 
 # ANSI Codes for Prompt (Escaped for Readline)
 RED = "\001\033[1;31m\002"
@@ -22,8 +18,8 @@ RESET = "\001\033[0m\002"
 
 class ReconSploit:
     MODULE_DIR = "modules"
-    VERSION = "1.5.0"
-    CODENAME = "KARMA"
+    VERSION = "1.5.1"
+    CODENAME = "ALIEN"
 
     def __init__(self):
         if not os.path.exists(self.MODULE_DIR): 
@@ -52,7 +48,7 @@ class ReconSploit:
         stats = self.count_modules()
         print(f"   {WHITE}+=[ {RED}ReconSploit {WHITE}V{self.VERSION} {RED}{self.CODENAME}")
         print(f"  {WHITE}+==[ {CYAN}{stats['auxiliary']} {WHITE}Auxiliary --- {GREEN}{stats['evasion']} {WHITE}Evasion")
-        print(f"  {WHITE}+=[ {RED}{stats['exploits']} {WHITE}Exploits --- \033[1;30m{stats['payload']} {WHITE}Payload\n")
+        print(f"   {WHITE}+=[ {RED}{stats['exploits']} {WHITE}Exploits --- \033[1;30m{stats['payload']} {WHITE}Payload\n")
 
     def start(self):
         self.show_banner()
