@@ -48,7 +48,7 @@ class ReconSploit:
 
     def show_banner(self):
         os.system("clear")
-        showbanner()
+        showbanners()
         stats = self.count_modules()
         print(f"   {WHITE}+=[ {RED}ReconSploit {WHITE}V{self.VERSION} {RED}{self.CODENAME}")
         print(f"  {WHITE}+==[ {CYAN}{stats['auxiliary']} {WHITE}Auxiliary --- {GREEN}{stats['evasion']} {WHITE}Evasion")
